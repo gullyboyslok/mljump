@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "mljump - Make ML Accessible",
-  description: "Build, train, and export ML models without advanced programming knowledge.",
+  title: "MLJump - Machine Learning Model Marketplace",
+  description: "Create, customize, and deploy machine learning models with ease",
 };
 
 export default function RootLayout({
@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-[#F5F5DC] min-h-screen`}>
+        <main className="container mx-auto px-4 py-8">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
