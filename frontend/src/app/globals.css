@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-orange: #FF6B00;
+  --dark-orange: #E65C00;
+  --black: #1A1A1A;
+  --light-gray: #F5F5F5;
+  --text-gray: #666666;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--light-gray);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
