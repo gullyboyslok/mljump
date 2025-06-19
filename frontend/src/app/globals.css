@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8B4513;
+  --primary-light: #A0522D;
+  --background: #F5F5DC;
+}
+
+body {
+  background-color: var(--background);
+  color: #333;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#8B4513] text-white py-2 px-4 rounded-lg hover:bg-[#A0522D] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors;
+  }
+}

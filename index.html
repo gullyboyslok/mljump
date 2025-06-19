@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mljump - Make ML Accessible</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #FF6B00;
+            --dark-orange: #E65C00;
+            --black: #1A1A1A;
+            --light-gray: #F5F5F5;
+            --text-gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .sign-in-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sign-in-btn:hover {
+            background-color: var(--dark-orange);
+            color: white;
+        }
+
+        .hero {
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--light-gray) 0%, white 100%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-orange);
+        }
+
+        .features {
+            padding: 4rem 5%;
+            background-color: white;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: var(--light-gray);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">mljump</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="/docs">Documentation</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/about">About</a>
+                <a href="/signin" class="sign-in-btn">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Make Machine Learning Accessible</h1>
+            <p>Build, train, and export ML models without advanced programming knowledge. Perfect for developers and non-technical users alike.</p>
+            <a href="/get-started" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Easy Model Building</h3>
+                <p>Create powerful machine learning models through our intuitive interface, no coding required.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Export to API</h3>
+                <p>Seamlessly export your models to API endpoints for easy integration into your projects.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Download Models</h3>
+                <p>Download your trained models in various formats for use in your applications.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
